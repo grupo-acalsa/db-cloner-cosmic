@@ -58,6 +58,25 @@ To run the worker and execute the database cloning operation, follow these steps
 
 5. Access Grafana dashboard: Open Grafana to observe and monitor the worker instances. The Grafana dashboard provides insights into the worker's performance.
 
+## 🛸 Error Codes
+
+REF_BC_001
+   ERROR_BACKUP
+   Error al realizar el respaldo.
+   Error en el respaldo. Verifica las credenciales y la base de datos.
+REF_BC_002
+   ERROR_EMPTY_BACKUP
+   ¡Error! El archivo de respaldo está vacío. Prueba unitaria fallida.
+REF_BC_003
+   ERROR_CREATE_TEST_DB
+   Error al crear la base de datos de prueba.
+REF_BC_004
+   ERROR_RESTORE_BACKUP
+   Error al restaurar el respaldo en la base de datos de prueba.
+REF_BC_005
+   ERROR_DB_COMPARISON
+   ¡Error! Las bases de datos son diferentes. Prueba unitaria fallida.
+
 ## 🌌 Contributions 
 
 Contributions to this cosmic project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
