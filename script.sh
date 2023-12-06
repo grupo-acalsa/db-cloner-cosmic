@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Verificación de las variables de entorno
-if [ -f .env ]; then
+if [ -f .envlocal ]; then
     source .envlocal
 else
     echo "Error: Don't found .env file or not exists." >&2
