@@ -49,9 +49,10 @@ mkdir -p "$minute_directory"
 
 # 🐀 Backup the database and compress it 🗃️
 
-mysqldump --no-tablespaces -u "root" -p"" "$LOCAL_DATABASE" > $minute_directory/$backupFileName
+mysqldump --no-tablespaces -u "$MYSQL_USER_LOCAL" -p"$MYSQL_PASSWORD_LOCAL" "$LOCAL_DATABASE" > "$minute_directory"/$backupFileName
 
-sleep 120
+sleep 10
 
-mysql -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" -h 107.180.51.205 "$REMOTE_DATABASE_TEST" < $minute_directory/$backupFileName
-
+mysql -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" -h "$REMOTE_URL" "$REMOTE_DATABASE_TEST" < "$minute_directory"/$backupFileName
+echo 'Load database, please wait'
+echo 'terminate'
